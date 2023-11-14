@@ -75,6 +75,7 @@ test('fetches results again when refresh button clicked', async () => {
   });
 
   const refreshButton = screen.getByText(/Refresh/i);
+  // So there's a refesh button (<a> more like) containing 'Refresh' in Scoreboard.js
   fireEvent.click(refreshButton);
 
   expect(dataFetcher).toBeCalledTimes(2);
